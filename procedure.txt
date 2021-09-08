@@ -1,0 +1,23 @@
+config files: upto config18, it is already there. From config19 onwards have to write.
+
+Simulations : upto config16 I've run the files (check outputs folder)
+
+results: the order of config file naming goes like
+	     ane1 = 1_sim_sim, st_line, 1 bot
+		2 = "             "     2 bots
+		3 = "             "     3 bots
+		4 = "         , grid_5x5, 1 bot
+		5 = "         ,  "        2 bots
+		6 = "          ,          3 bots
+		7 = 2_sim_rl, st_line, 1 bot
+
+	(check RESULTS.ods for reference)
+
+PROCESS : 
+1)/results/old_before_sep1/  find the csv files bot_0,bot1,bot_2 with the required column headers
+2)copy paste them to mrpp_sumo
+3)./tpbp.sh config/ane17.yaml
+4)take the generated csv files to the results folder
+5)generate plots (error.py, expected_idle_plot, etc...)
+6)paste the csv files, plots in their respective folder in results
+7)from the generates csv files, get max true idlness, max expected idleness, max error and write them down in RESULTS.ods (in results folder)
