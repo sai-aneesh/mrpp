@@ -1,0 +1,9 @@
+arv - conscientious reactive
+brv - conscientious cognitive
+crv - reactive with flags
+cxv - cbls
+drv - blackboard cognitive
+erv - idleness coordinator
+frv - random coordinator
+rxv - random mrpp
+sxv - sebs

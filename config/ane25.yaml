@@ -1,0 +1,8 @@
+use_sim_time: true
+graph: iitb
+init_bots: 6
+init_locations: ''
+done: false
+sim_length: 20000
+random_string: ane25
+algo_name: aneesh_mrpp3

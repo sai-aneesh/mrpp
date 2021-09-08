@@ -1,0 +1,8 @@
+use_sim_time: true
+graph: grid_5_5
+init_bots: 3
+init_locations: ''
+done: false
+sim_length: 200000
+random_string: ane6
+algo_name: 1_sim_sim

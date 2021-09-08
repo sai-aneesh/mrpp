@@ -1,0 +1,8 @@
+use_sim_time: true
+graph: ladder
+init_bots: 2
+init_locations: ''
+done: false
+sim_length: 20000
+random_string: ane40
+algo_name: aneesh_mrpp3
