@@ -1,8 +1,8 @@
 use_sim_time: true
-graph: circle
-init_bots: 2
+graph: st_line
+init_bots: 1
 init_locations: ''
 done: false
-sim_length: 20000
+sim_length: 200000
 random_string: ane37
-algo_name: aneesh_mrpp3
+algo_name: 7_avg_exp

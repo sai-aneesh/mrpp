@@ -1,8 +1,8 @@
 use_sim_time: true
-graph: ladder
-init_bots: 4
+graph: grid_5_5
+init_bots: 2
 init_locations: ''
 done: false
-sim_length: 20000
+sim_length: 200000
 random_string: ane47
-algo_name: aneesh_mrpp3
+algo_name: 8_avg_rl_true

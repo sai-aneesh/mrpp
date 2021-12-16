@@ -1,8 +1,8 @@
 use_sim_time: true
-graph: circle
-init_bots: 4
+graph: grid_5_5
+init_bots: 3
 init_locations: ''
 done: false
-sim_length: 20000
+sim_length: 200000
 random_string: ane72
-algo_name: aneesh_mrpp3
+algo_name: 12_ses_rl_true

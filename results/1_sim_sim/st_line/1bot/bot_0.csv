@@ -10145,3 +10145,4 @@ time,edge,old node,current node,probability (value_exp),value_coeff,expect,true,
 199951.0,gneE1,gneJ2,gneJ3,1.0,0.0,39.0,39.0,0.0,1
 199971.0,gneE2,gneJ3,gneJ4,0.5,0.0,78.0,78.0,0.0,2
 199990.0,gneE3,gneJ4,gneJ5,0.5,0.0,117.0,117.0,0.0,2
+time,edge,old node,current node,probability (value_exp),value_func,expect,true,expect-true,no.of neighbours

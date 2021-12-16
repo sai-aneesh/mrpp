@@ -68,6 +68,20 @@ class AN_MRPP:
                     self.value_func['bot_{}'.format(i)][n][m] = 0
                     self.value_exp['bot_{}'.format(i)][n][m] = 1./(len(list(self.graph.successors(n))))
                     self.store['bot_{}'.format(i)][n][m] = {}
+        dirname = rospkg.RosPack().get_path('mrpp_sumo')
+        algo = rospy.get_param('/algo_name')
+        graph = rospy.get_param('/graph')
+        no_bot = rospy.get_param('/init_bots')
+        if no_bot == 1:
+            self.save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bot')
+        else:
+            self.save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bots')
+
+        for i in range(0,no_bot):
+            name = os.path.join(self.save_path, 'bot_{}.csv'.format(i))
+            with open(name, 'a+', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["time","edge",'old node','current node',"probability (value_exp)",'value_func',"expect","true","expect-true","no.of neighbours"])
 
         for n in self.nodes:
             self.idle_true[n] = 0.
@@ -103,7 +117,8 @@ class AN_MRPP:
 
             for i, n in enumerate(data.robot_id):
                 self.current_node[n] = data.node_id[i]
-                with open('{}.csv'.format(n), 'a+', newline='') as file:
+                name = os.path.join(self.save_path, '{}.csv'.format(n))
+                with open(name, 'a+', newline='') as file:
                     writer = csv.writer(file)
 
                     if self.old_node[n] is not None :

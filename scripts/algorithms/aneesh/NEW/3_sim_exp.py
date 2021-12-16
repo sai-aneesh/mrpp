@@ -65,15 +65,15 @@ class AN_MRPP:
         graph = rospy.get_param('/graph')
         no_bot = rospy.get_param('/init_bots')
         if no_bot == 1:
-            save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bot')
+            self.save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bot')
         else:
-            save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bots')
+            self.save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bots')
 
         for i in range(0,no_bot):
-            name = os.path.join(save_path, 'bot_{}.csv'.format(i))
+            name = os.path.join(self.save_path, 'bot_{}.csv'.format(i))
             with open(name, 'a+', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow(["time","edge",'old node','current node',"probability (value_exp)",'value_coeff',"expect","true","expect-true","no.of neighbours"])
+                writer.writerow(["time","edge",'old node','current node',"probability (value_exp)",'value_func',"expect","true","expect-true","no.of neighbours"])
 
         for n in self.nodes:
             self.idle_true[n] = 0.
@@ -97,16 +97,7 @@ class AN_MRPP:
             for i, n in enumerate(data.robot_id):
                 self.current_node[n] = data.node_id[i]
 
-                dirname = rospkg.RosPack().get_path('mrpp_sumo')
-                algo = rospy.get_param('/algo_name')
-                graph = rospy.get_param('/graph')
-                no_bot = rospy.get_param('/init_bots')
-                if no_bot == 1:
-                    save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bot')
-                else:
-                    save_path = (dirname + '/results/' + algo + '/' + graph + '/' + str(no_bot) + 'bots')
-
-                name = os.path.join(save_path, '{}.csv'.format(n))
+                name = os.path.join(self.save_path, '{}.csv'.format(n))
                 with open(name, 'a+', newline='') as file:
                     writer = csv.writer(file)
 

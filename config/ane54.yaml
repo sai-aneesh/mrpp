@@ -1,8 +1,8 @@
 use_sim_time: true
-graph: ladder
-init_bots: 6
+graph: grid_5_5
+init_bots: 3
 init_locations: ''
 done: false
-sim_length: 20000
+sim_length: 200000
 random_string: ane54
-algo_name: observe_mrpp2
+algo_name: 9_ses_sim

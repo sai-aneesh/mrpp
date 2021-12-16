@@ -1,8 +1,0 @@
-use_sim_time: true
-graph: st_line
-init_bots: 3
-init_locations: ''
-done: false
-sim_length: 200000
-random_string: ane15
-algo_name: 3_sim_exp

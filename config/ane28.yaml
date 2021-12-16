@@ -1,8 +1,8 @@
 use_sim_time: true
-graph: st_line_assym
-init_bots: 6
+graph: grid_5_5
+init_bots: 1
 init_locations: ''
 done: false
-sim_length: 20000
+sim_length: 200000
 random_string: ane28
-algo_name: aneesh_mrpp3
+algo_name: 5_avg_sim
