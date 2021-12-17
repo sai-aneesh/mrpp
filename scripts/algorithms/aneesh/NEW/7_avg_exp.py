@@ -14,6 +14,7 @@ ROS Params
 '''
 import rospy
 import rospkg
+import os
 import numpy as np
 import networkx as nx
 from mrpp_sumo.srv import NextTaskBot, NextTaskBotResponse, AlgoReady, AlgoReadyResponse

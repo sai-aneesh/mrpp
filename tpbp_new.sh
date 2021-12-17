@@ -1,5 +1,5 @@
 
-for ((i=13; i<73; i++))
+for ((i=41; i<73; i++))
 do
     xterm -e "roscore" &
     sleep 3
