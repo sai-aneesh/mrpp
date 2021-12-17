@@ -57,11 +57,9 @@ Coming Soon
 
 
 ### Running a simulation
-    roscore
-    rosparam load path_to_yaml_file
-    rosrun mrpp_sumo sumo_wrapper.py
-    rosrun mrpp_sumo path_to_algo_file
-    rosrun mrpp_sumo command_center.py
+      roscd mrpp_sumo
+      ./tpbp_new.sh
+    
 
 
 ### Post Process
