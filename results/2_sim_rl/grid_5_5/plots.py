@@ -3,8 +3,9 @@ import rospkg
 import pandas as pd
 import matplotlib.pyplot as plt
 
-PATH = rospkg.RosPack().get_path('mrpp_sumo') + '/results'
+PATH = rospkg.RosPack().get_path('mrpp_sumo') + '/results/2_sim_rl/grid_5_5/1bot'
 fileNames = os.listdir(PATH)
+
 fileNames = [file for file in fileNames if '.csv' in file]
 
 for file in fileNames:
